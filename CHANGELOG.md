@@ -11,7 +11,7 @@ Changelog
   
   All links in code and documentation were updated accordingly. 
   
-  (props @dd32, @JustinyAhin, @jrfnl, @rmmcue, [#440][gh-440], [#441][gh-441], [#448][gh-448])
+  (props [@dd32][gh-dd32], [@JustinyAhin][gh-JustinyAhin], [@jrfnl][gh-jrfnl], [@rmccue][gh-rmccue], [#440][gh-440], [#441][gh-441], [#448][gh-448])
 
 
 - **[SECURITY FIX] Disable deserialization in `FilteredIterator`**
@@ -24,7 +24,7 @@ Changelog
 
   Related WordPress CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-28032
 
-  (props @dd32, @desrosj, @jrfnl, @peterwilsoncc, @SergeyBiryukov, @whyisjake, @xknown, [#421][gh-421], [#422][gh-422], [#457][gh-457])
+  (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@peterwilsoncc][gh-peterwilsoncc], [@SergeyBiryukov][gh-SergeyBiryukov], [@whyisjake][gh-whyisjake], [@xknown][gh-xknown], [#421][gh-421], [#422][gh-422], [#457][gh-457])
 
 
 - **Manage `"Expect"` header with `cURL` transport**
@@ -33,14 +33,14 @@ Changelog
 
   To prevent this, `Requests` now adds an empty `"Expect"` header to requests that are smaller than 1 MB and use HTTP/1.1.
 
-  (props @carlalexander, @TimothyBJacobs, [#453][gh-453], [#454][gh-454], [#469][gh-469])
+  (props [@carlalexander][gh-carlalexander], [@TimothyBJacobs][gh-TimothyBJacobs], [#453][gh-453], [#454][gh-454], [#469][gh-469])
 
 
 - **Update bundled certificates as of 2021-02-12**
 
   The bundled certificates were updated to match what WordPress Core is currently shipping.
 
-  (props @ozh, @patmead, @schlessera, @todeveni, [#451][gh-451], [#398][gh-398], [#385][gh-385])
+  (props [@ozh][gh-ozh], [@patmead][gh-patmead], [@schlessera][gh-schlessera], [@todeveni][gh-todeveni], [#451][gh-451], [#398][gh-398], [#385][gh-385])
 
 
 - **Add required `Content-*` headers for empty `POST` requests**
@@ -51,21 +51,21 @@ Changelog
   used for GET nor HEAD requests, but is expected for POST requests.
   ```
 
-  (props @dd32, @gstrauss, @jrfnl, @soulseekah, [#248][gh-248], [#249][gh-249], [#318][gh-318], [#368][gh-368])
+  (props [@dd32][gh-dd32], [@gstrauss][gh-gstrauss], [@jrfnl][gh-jrfnl], [@soulseekah][gh-soulseekah], [#248][gh-248], [#249][gh-249], [#318][gh-318], [#368][gh-368])
 
 
 - **Ignore locale when creating the HTTP version string from a float**
 
   The previous behavior allowed for the locale to mess up the float to string conversion resulting in a `GET / HTTP/1,1` instead of `GET / HTTP/1.1` request.
 
-  (props @tonebender, @Zegnat, [#335][gh-335], [#339][gh-339])
+  (props [@tonebender][gh-tonebender], [@Zegnat][gh-Zegnat], [#335][gh-335], [#339][gh-339])
 
 
 - **Make `verify => false` work with `fsockopen`**
 
   This allows the `fsockopen` transport now to ignore SSL failures when requested.
   
-  (props @soulseekah, [#310][gh-310], [#311][gh-311])
+  (props [@soulseekah][gh-soulseekah], [#310][gh-310], [#311][gh-311])
 
 - Improve testing**
   
@@ -78,7 +78,7 @@ Changelog
   - Code coverage moved from coverall to codecov.
   - Add shebangs to proxy shell scripts
 
-  (props @datagutten, @jrfnl, @schlessera, [#345][gh-345], [#351][gh-351], [#355][gh-355], [#412][gh-412], [#414][gh-414], [#445][gh-445], [#458][gh-458], [#464][gh-464])
+  (props [@datagutten][gh-datagutten], [@jrfnl][gh-jrfnl], [@schlessera][gh-schlessera], [#345][gh-345], [#351][gh-351], [#355][gh-355], [#412][gh-412], [#414][gh-414], [#445][gh-445], [#458][gh-458], [#464][gh-464])
 
 
 - **Improve code quality**
@@ -97,7 +97,7 @@ Changelog
   - Remove dead code.
   - Improve docblocks.
 
-  (props @aaronjorbin, @jrfnl, @KasperFranz, @ozh, @schlessera, @TysonAndre, [#263][gh-263], [#296][gh-296], [#328][gh-328], [#346][gh-346], [#358][gh-358], [#359][gh-359], [#370][gh-370], [#386][gh-386], [#396][gh-396], [#400][gh-400], [#401][gh-401], [#404][gh-404], [#413][gh-413], [#425][gh-425], [#426][gh-426], [#456][gh-456])
+  (props [@aaronjorbin][gh-aaronjorbin], [@jrfnl][gh-jrfnl], [@KasperFranz][gh-KasperFranz], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TysonAndre][gh-TysonAndre], [#263][gh-263], [#296][gh-296], [#328][gh-328], [#346][gh-346], [#358][gh-358], [#359][gh-359], [#370][gh-370], [#386][gh-386], [#396][gh-396], [#400][gh-400], [#401][gh-401], [#404][gh-404], [#413][gh-413], [#425][gh-425], [#426][gh-426], [#456][gh-456])
   
 
 - **Improve and enforce code style**
@@ -116,7 +116,7 @@ Changelog
   - Make code style consistent across all the code and tests.
   - Create a code style rule & associated check to enforce its consistency.
 
-  (props @jrfnl, [#360][gh-360], [#361][gh-361], [#362][gh-362], [#363][gh-363], [#364][gh-364], [#399][gh-399], [#402][gh-402], [#403][gh-403], [#405][gh-405], [#406][gh-406], [#408][gh-408], [#409][gh-409], [#410][gh-410], [#411][gh-411], [#415][gh-415], [#416][gh-416], [#417][gh-417], [#423][gh-423], [#424][gh-424], [#434][gh-434])
+  (props [@jrfnl][gh-jrfnl], [#360][gh-360], [#361][gh-361], [#362][gh-362], [#363][gh-363], [#364][gh-364], [#399][gh-399], [#402][gh-402], [#403][gh-403], [#405][gh-405], [#406][gh-406], [#408][gh-408], [#409][gh-409], [#410][gh-410], [#411][gh-411], [#415][gh-415], [#416][gh-416], [#417][gh-417], [#423][gh-423], [#424][gh-424], [#434][gh-434])
 
 
 - **Replace Travis CI with GitHub Actions (partial)**
@@ -127,7 +127,7 @@ Changelog
 
   This move will be completed after the planned minimum version bump to PHP 5.6+ with the next release, at which point we will get rid of all the remaining Travis CI integrations.
 
-  (props @dd32, @desrosj, @jrfnl, @ntwb, @ozh, @schlessera, @TimothyBJacobs, @TysonAndre, [#280][gh-280], [#298][gh-298], [#302][gh-302], [#303][gh-303], [#352][gh-352], [#353][gh-353], [#354][gh-354], [#356][gh-356], [#366][gh-366], [#388][gh-388], [#397][gh-397], [#428][gh-428], [#436][gh-436], [#439][gh-439], [#461][gh-461], [#467][gh-467])
+  (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@ntwb][gh-ntwb], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TimothyBJacobs][gh-TimothyBJacobs], [@TysonAndre][gh-TysonAndre], [#280][gh-280], [#298][gh-298], [#302][gh-302], [#303][gh-303], [#352][gh-352], [#353][gh-353], [#354][gh-354], [#356][gh-356], [#366][gh-366], [#388][gh-388], [#397][gh-397], [#428][gh-428], [#436][gh-436], [#439][gh-439], [#461][gh-461], [#467][gh-467])
 
 
 - **Update and improve documentation**
@@ -137,7 +137,7 @@ Changelog
   - Fix code blocks in `README.md` file.
   - Add pagination to documentation pages.
 
-  (props @desrosj, @jrfnl, @JustinyAhin, @tnorthcutt, [#334][gh-334], [#367][gh-367], [#387][gh-387], [#468][gh-468], [#465][gh-465], [#462][gh-462], [#443][gh-443])
+  (props [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@JustinyAhin][gh-JustinyAhin], [@tnorthcutt][gh-tnorthcutt], [#334][gh-334], [#367][gh-367], [#387][gh-387], [#468][gh-468], [#465][gh-465], [#462][gh-462], [#443][gh-443])
 
 [gh-334]: https://github.com/WordPress/Requests/issues/334
 [gh-428]: https://github.com/WordPress/Requests/issues/428
@@ -238,20 +238,20 @@ Changelog
   Requests is now tested against both HHVM and PHP 7, and they are supported as
   first-party platforms.
 
-  (props @rmccue, [#106][gh-106], [#176][gh-176])
+  (props [@rmccue][gh-rmccue], [#106][gh-106], [#176][gh-176])
 
 - Transfer & connect timeouts, in seconds & milliseconds
 
   cURL is unable to handle timeouts under a second in DNS lookups, so we round
   those up to ensure 1-999ms isn't counted as an instant failure.
 
-  (props @ozh, @rmccue, [#97][gh-97], [#216][gh-216])
+  (props [@ozh][gh-ozh], [@rmccue][gh-rmccue], [#97][gh-97], [#216][gh-216])
 
 - Rework cookie handling to be more thorough.
 
   Cookies are now restricted to the same-origin by default, expiration is checked.
 
-  (props @catharsisjelly, @rmccue, [#120][gh-120], [#124][gh-124], [#130][gh-130], [#132][gh-132], [#156][gh-156])
+  (props [@catharsisjelly][gh-catharsisjelly], [@rmccue][gh-rmccue], [#120][gh-120], [#124][gh-124], [#130][gh-130], [#132][gh-132], [#156][gh-156])
 
 - Improve testing
 
@@ -259,180 +259,180 @@ Changelog
   improvements to the quality of the testing suite. There are now also
   comprehensive proxy tests to ensure coverage there.
 
-  (props @rmccue, [#75][gh-75], [#107][gh-107], [#170][gh-170], [#177][gh-177], [#181][gh-181], [#183][gh-183], [#185][gh-185], [#196][gh-196], [#202][gh-202], [#203][gh-203])
+  (props [@rmccue][gh-rmccue], [#75][gh-75], [#107][gh-107], [#170][gh-170], [#177][gh-177], [#181][gh-181], [#183][gh-183], [#185][gh-185], [#196][gh-196], [#202][gh-202], [#203][gh-203])
 
 - Support custom HTTP methods
 
   Previously, custom HTTP methods were only supported on sockets; they are now
   supported across all transports.
 
-  (props @ocean90, [#227][gh-227])
+  (props [@ocean90][gh-ocean90], [#227][gh-227])
 
 - Add byte limit option
 
-  (props @rmccue, [#172][gh-172])
+  (props [@rmccue][gh-rmccue], [#172][gh-172])
 
 - Support a Requests_Proxy_HTTP() instance for the proxy setting.
 
-  (props @ocean90, [#223][gh-223])
+  (props [@ocean90][gh-ocean90], [#223][gh-223])
 
 - Add progress hook
 
-  (props @rmccue, [#180][gh-180])
+  (props [@rmccue][gh-rmccue], [#180][gh-180])
 
 - Add a before_redirect hook to alter redirects
 
-  (props @rmccue, [#205][gh-205])
+  (props [@rmccue][gh-rmccue], [#205][gh-205])
 
 - Pass cURL info to after_request
 
-  (props @rmccue, [#206][gh-206])
+  (props [@rmccue][gh-rmccue], [#206][gh-206])
 
 - Remove explicit autoload in Composer installation instructions
 
-  (props @SlikNL, [#86][gh-86])
+  (props [@SlikNL][gh-SlikNL], [#86][gh-86])
 
 - Restrict CURLOPT_PROTOCOLS on `defined()` instead of `version_compare()`
 
-  (props @ozh, [#92][gh-92])
+  (props [@ozh][gh-ozh], [#92][gh-92])
 
 - Fix doc - typo in "Authentication"
 
-  (props @remik, [#99][gh-99])
+  (props [@remik][gh-remik], [#99][gh-99])
 
 - Contextually check for a valid transport
 
-  (props @ozh, [#101][gh-101])
+  (props [@ozh][gh-ozh], [#101][gh-101])
 
 - Follow relative redirects correctly
 
-  (props @ozh, [#103][gh-103])
+  (props [@ozh][gh-ozh], [#103][gh-103])
 
 - Use cURL's version_number
 
-  (props @mishan, [#104][gh-104])
+  (props [@mishan][gh-mishan], [#104][gh-104])
 
 - Removed duplicated option docs
 
-  (props @staabm, [#112][gh-112])
+  (props [@staabm][gh-staabm], [#112][gh-112])
 
 - code styling fixed
 
-  (props @imsaintx, [#113][gh-113])
+  (props [@imsaintx][gh-imsaintx], [#113][gh-113])
 
 - Fix IRI "normalization"
 
-  (props @ozh, [#128][gh-128])
+  (props [@ozh][gh-ozh], [#128][gh-128])
 
 - Mention two PHP extension dependencies in the README.
 
-  (props @orlitzky, [#136][gh-136])
+  (props [@orlitzky][gh-orlitzky], [#136][gh-136])
 
 - Ignore coverage report files
 
-  (props @ozh, [#148][gh-148])
+  (props [@ozh][gh-ozh], [#148][gh-148])
 
 - drop obsolete "return" after throw
 
-  (props @staabm, [#150][gh-150])
+  (props [@staabm][gh-staabm], [#150][gh-150])
 
 - Updated exception message to specify both http + https
 
-  (props @beutnagel, [#162][gh-162])
+  (props [@beutnagel][gh-beutnagel], [#162][gh-162])
 
 - Sets `stream_headers` method to public to allow calling it from other
 places.
 
-  (props @adri, [#158][gh-158])
+  (props [@adri][gh-adri], [#158][gh-158])
 
 - Remove duplicated stream_get_meta_data call
 
-  (props @rmccue, [#179][gh-179])
+  (props [@rmccue][gh-rmccue], [#179][gh-179])
 
 - Transmits $errno from stream_socket_client in exception
 
-  (props @laurentmartelli, [#174][gh-174])
+  (props [@laurentmartelli][gh-laurentmartelli], [#174][gh-174])
 
 - Correct methods to use snake_case
 
-  (props @rmccue, [#184][gh-184])
+  (props [@rmccue][gh-rmccue], [#184][gh-184])
 
 - Improve code quality
 
-  (props @rmccue, [#186][gh-186])
+  (props [@rmccue][gh-rmccue], [#186][gh-186])
 
 - Update Build Status image
 
-  (props @rmccue, [#187][gh-187])
+  (props [@rmccue][gh-rmccue], [#187][gh-187])
 
 - Fix/Rationalize transports (v2)
 
-  (props @rmccue, [#188][gh-188])
+  (props [@rmccue][gh-rmccue], [#188][gh-188])
 
 - Surface cURL errors
 
-  (props @ifwe, [#194][gh-194])
+  (props [@ifwe][gh-ifwe], [#194][gh-194])
 
 - Fix for memleak and curl_close() never being called
 
-  (props @kwuerl, [#200][gh-200])
+  (props [@kwuerl][gh-kwuerl], [#200][gh-200])
 
 - addex how to install with composer
 
-  (props @royopa, [#164][gh-164])
+  (props [@royopa][gh-royopa], [#164][gh-164])
 
 - Uppercase the method to ensure compatibility
 
-  (props @rmccue, [#207][gh-207])
+  (props [@rmccue][gh-rmccue], [#207][gh-207])
 
 - Store default certificate path
 
-  (props @rmccue, [#210][gh-210])
+  (props [@rmccue][gh-rmccue], [#210][gh-210])
 
 - Force closing keep-alive connections on old cURL
 
-  (props @rmccue, [#211][gh-211])
+  (props [@rmccue][gh-rmccue], [#211][gh-211])
 
 - Docs: Updated HTTP links with HTTPS links where applicable
 
-  (props @ntwb, [#215][gh-215])
+  (props [@ntwb][gh-ntwb], [#215][gh-215])
 
 - Remove the executable bit
 
-  (props @ocean90, [#224][gh-224])
+  (props [@ocean90][gh-ocean90], [#224][gh-224])
 
 - Change more links to HTTPS
 
-  (props @rmccue, [#217][gh-217])
+  (props [@rmccue][gh-rmccue], [#217][gh-217])
 
 - Bail from cURL when either `curl_init()` OR `curl_exec()` are unavailable
 
-  (props @dd32, [#230][gh-230])
+  (props [@dd32][gh-dd32], [#230][gh-230])
 
 - Disable OpenSSL's internal peer_name checking when `verifyname` is disabled.
 
-  (props @dd32, [#239][gh-239])
+  (props [@dd32][gh-dd32], [#239][gh-239])
 
 - Only include the port number in the `Host` header when it differs from
 default
 
-  (props @dd32, [#238][gh-238])
+  (props [@dd32][gh-dd32], [#238][gh-238])
 
 - Respect port if specified for HTTPS connections
 
-  (props @dd32, [#237][gh-237])
+  (props [@dd32][gh-dd32], [#237][gh-237])
 
 - Allow paths starting with a double-slash
 
-  (props @rmccue, [#240][gh-240])
+  (props [@rmccue][gh-rmccue], [#240][gh-240])
 
 - Fixes bug in rfc2616 #3.6.1 implementation.
 
-  (props @stephenharris, [#236][gh-236], [#3][gh-3])
+  (props [@stephenharris][gh-stephenharris], [#236][gh-236], [#3][gh-3])
 
 - CURLOPT_HTTPHEADER在php7接受空数组导致php-fpm奔溃
 
-  (props @qibinghua, [#219][gh-219])
+  (props [@qibinghua][gh-qibinghua], [#219][gh-219])
 
 [gh-3]: https://github.com/WordPress/Requests/issues/3
 [gh-75]: https://github.com/WordPress/Requests/issues/75
@@ -542,3 +542,45 @@ default
 1.5.0
 -----
 Initial release!
+
+[gh-JustinyAhin]: https://github.com/JustinyAhin
+[gh-KasperFranz]: https://github.com/KasperFranz
+[gh-SergeyBiryukov]: https://github.com/SergeyBiryukov
+[gh-SlikNL]: https://github.com/SlikNL
+[gh-TimothyBJacobs]: https://github.com/TimothyBJacobs
+[gh-TysonAndre]: https://github.com/TysonAndre
+[gh-Zegnat]: https://github.com/Zegnat
+[gh-aaronjorbin]: https://github.com/aaronjorbin
+[gh-adri]: https://github.com/adri
+[gh-beutnagel]: https://github.com/beutnagel
+[gh-carlalexander]: https://github.com/carlalexander
+[gh-catharsisjelly]: https://github.com/catharsisjelly
+[gh-datagutten]: https://github.com/datagutten
+[gh-dd32]: https://github.com/dd32
+[gh-desrosj]: https://github.com/desrosj
+[gh-gstrauss]: https://github.com/gstrauss
+[gh-ifwe]: https://github.com/ifwe
+[gh-imsaintx]: https://github.com/imsaintx
+[gh-jrfnl]: https://github.com/jrfnl
+[gh-kwuerl]: https://github.com/kwuerl
+[gh-laurentmartelli]: https://github.com/laurentmartelli
+[gh-mishan]: https://github.com/mishan
+[gh-ntwb]: https://github.com/ntwb
+[gh-ocean90]: https://github.com/ocean90
+[gh-orlitzky]: https://github.com/orlitzky
+[gh-ozh]: https://github.com/ozh
+[gh-patmead]: https://github.com/patmead
+[gh-peterwilsoncc]: https://github.com/peterwilsoncc
+[gh-qibinghua]: https://github.com/qibinghua
+[gh-remik]: https://github.com/remik
+[gh-rmccue]: https://github.com/rmccue
+[gh-royopa]: https://github.com/royopa
+[gh-schlessera]: https://github.com/schlessera
+[gh-soulseekah]: https://github.com/soulseekah
+[gh-staabm]: https://github.com/staabm
+[gh-stephenharris]: https://github.com/stephenharris
+[gh-tnorthcutt]: https://github.com/tnorthcutt
+[gh-todeveni]: https://github.com/todeveni
+[gh-tonebender]: https://github.com/tonebender
+[gh-whyisjake]: https://github.com/whyisjake
+[gh-xknown]: https://github.com/xknown
