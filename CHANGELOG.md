@@ -4,15 +4,17 @@ Changelog
 1.8.0
 -----
 
-- **Repository moved to `WordPress\Requests`**
+### IMPORTANT NOTES
 
-  The `Requests` library has been officially adopted by the WordPress project
-  and has therefore been moved to `https://github.com/WordPress/Requests`.
-  
-  All links in code and documentation were updated accordingly. 
-  
-  (props [@dd32][gh-dd32], [@JustinyAhin][gh-JustinyAhin], [@jrfnl][gh-jrfnl], [@rmccue][gh-rmccue], [#440][gh-440], [#441][gh-441], [#448][gh-448])
+#### Last release before a PHP minimum version bump
 
+  Release 1.8.0 will be the last release with compatibility for PHP 5.2 - 5.5. With the next release (v2.0.0), the minimum PHP version will be bumped to 5.6+, matching the current PHP minimum version requirement of WordPress Core.
+
+#### Last release supporting PEAR distribution
+
+  Release 1.8.0 will be the last release to be distributed via PEAR. From release 2.0.0 onwards, consumers of this library will have to switch to Composer to receive updates.
+
+### Overview of changes
 
 - **[SECURITY FIX] Disable deserialization in `FilteredIterator`**
 
@@ -25,6 +27,16 @@ Changelog
   Related WordPress CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-28032
 
   (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@peterwilsoncc][gh-peterwilsoncc], [@SergeyBiryukov][gh-SergeyBiryukov], [@whyisjake][gh-whyisjake], [@xknown][gh-xknown], [#421][gh-421], [#422][gh-422], [#457][gh-457])
+
+
+- **Repository moved to `WordPress\Requests`**
+
+  The `Requests` library has been officially adopted by the WordPress project
+  and has therefore been moved to `https://github.com/WordPress/Requests`.
+
+  All links in code and documentation were updated accordingly.
+
+  (props [@dd32][gh-dd32], [@JustinyAhin][gh-JustinyAhin], [@jrfnl][gh-jrfnl], [@rmccue][gh-rmccue], [#440][gh-440], [#441][gh-441], [#448][gh-448])
 
 
 - **Manage `"Expect"` header with `cURL` transport**
