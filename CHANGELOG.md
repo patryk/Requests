@@ -1,6 +1,235 @@
 Changelog
 =========
 
+1.8.0
+-----
+
+- **Repository moved to `WordPress\Requests`**
+
+  The `Requests` library has been officially adopted by the WordPress project
+  and has therefore been moved to `https://github.com/WordPress/Requests`.
+  
+  All links in code and documentation were updated accordingly. 
+  
+  (props @dd32, @JustinyAhin, @jrfnl, @rmmcue, [#440][gh-440], [#441][gh-441], [#448][gh-448])
+
+
+- **[SECURITY FIX] Disable deserialization in `FilteredIterator`**
+
+  A `Deserialization of Untrusted Data` weakness was found in the `FilteredIterator` class.
+  
+  This security vulnerability was first detected in the files bundled with WordPress. The security fix from https://core.trac.wordpress.org/changeset/49373 has now been ported back into the library.
+  
+  GitHub security advisory: [link to GHSA]
+
+  Related WordPress CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-28032
+
+  (props @dd32, @desrosj, @jrfnl, @peterwilsoncc, @SergeyBiryukov, @whyisjake, @xknown, [#421][gh-421], [#422][gh-422], [#457][gh-457])
+
+
+- **Manage `"Expect"` header with `cURL` transport**
+
+  By default, `cURL` adds a `Expect: 100-Continue` header to certain requests. This can add as much as a second delay to requests done using `cURL`. This is [discussed on the cURL mailing list](https://curl.se/mail/lib-2017-07/0013.html).
+
+  To prevent this, `Requests` now adds an empty `"Expect"` header to requests that are smaller than 1 MB and use HTTP/1.1.
+
+  (props @carlalexander, @TimothyBJacobs, [#453][gh-453], [#454][gh-454], [#469][gh-469])
+
+
+- **Update bundled certificates as of 2021-02-12**
+
+  The bundled certificates were updated to match what WordPress Core is currently shipping.
+
+  (props @ozh, @patmead, @schlessera, @todeveni, [#451][gh-451], [#398][gh-398], [#385][gh-385])
+
+
+- **Add required `Content-*` headers for empty `POST` requests**
+
+  Sends the `Content-Length` and `Content-Type` headers even for empty `POST` requests, as the length is expected as per [RFC2616 Section 14.13](https://tools.ietf.org/html/rfc2616#section-14.13):
+  ```
+  Content-Length header "SHOULD" be included. In practice, it is not
+  used for GET nor HEAD requests, but is expected for POST requests.
+  ```
+
+  (props @dd32, @gstrauss, @jrfnl, @soulseekah, [#248][gh-248], [#249][gh-249], [#318][gh-318], [#368][gh-368])
+
+
+- **Ignore locale when creating the HTTP version string from a float**
+
+  The previous behavior allowed for the locale to mess up the float to string conversion resulting in a `GET / HTTP/1,1` instead of `GET / HTTP/1.1` request.
+
+  (props @tonebender, @Zegnat, [#335][gh-335], [#339][gh-339])
+
+
+- **Make `verify => false` work with `fsockopen`**
+
+  This allows the `fsockopen` transport now to ignore SSL failures when requested.
+  
+  (props @soulseekah, [#310][gh-310], [#311][gh-311])
+
+- Improve testing**
+  
+  Lots of improvements were made to render the tests more reliable and increase the coverage.
+
+  - PHPUnit config file moved to the project root.
+  - Lots of fixing.
+  - Builds made more stable.
+  - Tests added for exception messages.
+  - Code coverage moved from coverall to codecov.
+  - Add shebangs to proxy shell scripts
+
+  (props @datagutten, @jrfnl, @schlessera, [#345][gh-345], [#351][gh-351], [#355][gh-355], [#412][gh-412], [#414][gh-414], [#445][gh-445], [#458][gh-458], [#464][gh-464])
+
+
+- **Improve code quality**
+  
+  A whole swoop of changes has been made to modernize the code and make it more consistent across PHP versions and platforms.
+
+  - Fix PHP 7/8 compatibility issues.
+  - Add linting.
+  - Add a `.gitattributes` file
+  - Remove useless variable assignments.
+  - Use strict comparisons.
+  - Improve typing.
+  - Remove unused code.
+  - Don't use `count()` in a looping condition.
+  - Remove unnecessary references.
+  - Remove dead code.
+  - Improve docblocks.
+
+  (props @aaronjorbin, @jrfnl, @KasperFranz, @ozh, @schlessera, @TysonAndre, [#263][gh-263], [#296][gh-296], [#328][gh-328], [#346][gh-346], [#358][gh-358], [#359][gh-359], [#370][gh-370], [#386][gh-386], [#396][gh-396], [#400][gh-400], [#401][gh-401], [#404][gh-404], [#413][gh-413], [#425][gh-425], [#426][gh-426], [#456][gh-456])
+  
+
+- **Improve and enforce code style**
+
+  The code style has been made consistent across all the code and tests and is now enforced via a custom PHPCS rule set.
+
+  The WordPress Coding Standards were chosen as the basis for the code style checks as most contributors to this library originate from the WordPress community and will be familiar with this code style.
+
+  Main differences from the WordPress Coding Standards based on discussions and an analysis of the code styles already in use:
+
+  - No whitespace on the inside of parentheses.
+  - No Yoda conditions.
+
+  A more detailed overview of the decisions that went into the final code style rules can be found at [#434][gh-434].
+
+  - Make code style consistent across all the code and tests.
+  - Create a code style rule & associated check to enforce its consistency.
+
+  (props @jrfnl, [#360][gh-360], [#361][gh-361], [#362][gh-362], [#363][gh-363], [#364][gh-364], [#399][gh-399], [#402][gh-402], [#403][gh-403], [#405][gh-405], [#406][gh-406], [#408][gh-408], [#409][gh-409], [#410][gh-410], [#411][gh-411], [#415][gh-415], [#416][gh-416], [#417][gh-417], [#423][gh-423], [#424][gh-424], [#434][gh-434])
+
+
+- **Replace Travis CI with GitHub Actions (partial)**
+  
+  The entire CI setup is gradually being moved from Travis CI to GitHub Actions. 
+  
+  At this point, GitHub Actions takes over the CI from PHP 5.5 onwards, leaving Travis CI as a fallback for lower PHP versions.
+
+  This move will be completed after the planned minimum version bump to PHP 5.6+ with the next release, at which point we will get rid of all the remaining Travis CI integrations.
+
+  (props @dd32, @desrosj, @jrfnl, @ntwb, @ozh, @schlessera, @TimothyBJacobs, @TysonAndre, [#280][gh-280], [#298][gh-298], [#302][gh-302], [#303][gh-303], [#352][gh-352], [#353][gh-353], [#354][gh-354], [#356][gh-356], [#366][gh-366], [#388][gh-388], [#397][gh-397], [#428][gh-428], [#436][gh-436], [#439][gh-439], [#461][gh-461], [#467][gh-467])
+
+
+- **Update and improve documentation**
+  - Use clearer and more inclusive language.
+  - Update the GitHub Pages site.
+  - Update content and various tweaks to the markdown.
+  - Fix code blocks in `README.md` file.
+  - Add pagination to documentation pages.
+
+  (props @desrosj, @jrfnl, @JustinyAhin, @tnorthcutt, [#334][gh-334], [#367][gh-367], [#387][gh-387], [#468][gh-468], [#465][gh-465], [#462][gh-462], [#443][gh-443])
+
+[gh-334]: https://github.com/WordPress/Requests/issues/334
+[gh-428]: https://github.com/WordPress/Requests/issues/428
+[gh-280]: https://github.com/WordPress/Requests/issues/280
+[gh-298]: https://github.com/WordPress/Requests/issues/298
+[gh-310]: https://github.com/WordPress/Requests/issues/310
+[gh-248]: https://github.com/WordPress/Requests/issues/248
+[gh-249]: https://github.com/WordPress/Requests/issues/249
+[gh-318]: https://github.com/WordPress/Requests/issues/318
+[gh-335]: https://github.com/WordPress/Requests/issues/335
+[gh-440]: https://github.com/WordPress/Requests/issues/440
+[gh-194]: https://github.com/WordPress/Requests/issues/194
+[gh-238]: https://github.com/WordPress/Requests/issues/238
+[gh-263]: https://github.com/WordPress/Requests/issues/263
+[gh-296]: https://github.com/WordPress/Requests/issues/296
+[gh-302]: https://github.com/WordPress/Requests/issues/302
+[gh-303]: https://github.com/WordPress/Requests/issues/303
+[gh-311]: https://github.com/WordPress/Requests/issues/311
+[gh-328]: https://github.com/WordPress/Requests/issues/328
+[gh-339]: https://github.com/WordPress/Requests/issues/339
+[gh-345]: https://github.com/WordPress/Requests/issues/345
+[gh-346]: https://github.com/WordPress/Requests/issues/346
+[gh-351]: https://github.com/WordPress/Requests/issues/351
+[gh-352]: https://github.com/WordPress/Requests/issues/352
+[gh-353]: https://github.com/WordPress/Requests/issues/353
+[gh-354]: https://github.com/WordPress/Requests/issues/354
+[gh-355]: https://github.com/WordPress/Requests/issues/355
+[gh-356]: https://github.com/WordPress/Requests/issues/356
+[gh-358]: https://github.com/WordPress/Requests/issues/358
+[gh-359]: https://github.com/WordPress/Requests/issues/359
+[gh-360]: https://github.com/WordPress/Requests/issues/360
+[gh-361]: https://github.com/WordPress/Requests/issues/361
+[gh-362]: https://github.com/WordPress/Requests/issues/362
+[gh-363]: https://github.com/WordPress/Requests/issues/363
+[gh-364]: https://github.com/WordPress/Requests/issues/364
+[gh-366]: https://github.com/WordPress/Requests/issues/366
+[gh-367]: https://github.com/WordPress/Requests/issues/367
+[gh-367]: https://github.com/WordPress/Requests/issues/367
+[gh-368]: https://github.com/WordPress/Requests/issues/368
+[gh-370]: https://github.com/WordPress/Requests/issues/370
+[gh-385]: https://github.com/WordPress/Requests/issues/385
+[gh-386]: https://github.com/WordPress/Requests/issues/386
+[gh-387]: https://github.com/WordPress/Requests/issues/387
+[gh-388]: https://github.com/WordPress/Requests/issues/388
+[gh-396]: https://github.com/WordPress/Requests/issues/396
+[gh-397]: https://github.com/WordPress/Requests/issues/397
+[gh-398]: https://github.com/WordPress/Requests/issues/398
+[gh-399]: https://github.com/WordPress/Requests/issues/399
+[gh-400]: https://github.com/WordPress/Requests/issues/400
+[gh-401]: https://github.com/WordPress/Requests/issues/401
+[gh-402]: https://github.com/WordPress/Requests/issues/402
+[gh-403]: https://github.com/WordPress/Requests/issues/403
+[gh-404]: https://github.com/WordPress/Requests/issues/404
+[gh-405]: https://github.com/WordPress/Requests/issues/405
+[gh-406]: https://github.com/WordPress/Requests/issues/406
+[gh-408]: https://github.com/WordPress/Requests/issues/408
+[gh-409]: https://github.com/WordPress/Requests/issues/409
+[gh-410]: https://github.com/WordPress/Requests/issues/410
+[gh-411]: https://github.com/WordPress/Requests/issues/411
+[gh-412]: https://github.com/WordPress/Requests/issues/412
+[gh-413]: https://github.com/WordPress/Requests/issues/413
+[gh-414]: https://github.com/WordPress/Requests/issues/414
+[gh-415]: https://github.com/WordPress/Requests/issues/415
+[gh-416]: https://github.com/WordPress/Requests/issues/416
+[gh-417]: https://github.com/WordPress/Requests/issues/417
+[gh-421]: https://github.com/WordPress/Requests/issues/421
+[gh-422]: https://github.com/WordPress/Requests/issues/422
+[gh-423]: https://github.com/WordPress/Requests/issues/423
+[gh-424]: https://github.com/WordPress/Requests/issues/424
+[gh-425]: https://github.com/WordPress/Requests/issues/425
+[gh-426]: https://github.com/WordPress/Requests/issues/426
+[gh-434]: https://github.com/WordPress/Requests/issues/434
+[gh-436]: https://github.com/WordPress/Requests/issues/436
+[gh-439]: https://github.com/WordPress/Requests/issues/439
+[gh-441]: https://github.com/WordPress/Requests/issues/441
+[gh-443]: https://github.com/WordPress/Requests/issues/443
+[gh-445]: https://github.com/WordPress/Requests/issues/445
+[gh-448]: https://github.com/WordPress/Requests/issues/448
+[gh-451]: https://github.com/WordPress/Requests/issues/451
+[gh-453]: https://github.com/WordPress/Requests/issues/453
+[gh-454]: https://github.com/WordPress/Requests/issues/454
+[gh-456]: https://github.com/WordPress/Requests/issues/456
+[gh-457]: https://github.com/WordPress/Requests/issues/457
+[gh-458]: https://github.com/WordPress/Requests/issues/458
+[gh-461]: https://github.com/WordPress/Requests/issues/461
+[gh-462]: https://github.com/WordPress/Requests/issues/462
+[gh-464]: https://github.com/WordPress/Requests/issues/464
+[gh-465]: https://github.com/WordPress/Requests/issues/465
+[gh-467]: https://github.com/WordPress/Requests/issues/467
+[gh-468]: https://github.com/WordPress/Requests/issues/468
+[gh-469]: https://github.com/WordPress/Requests/issues/469
+
 1.7.0
 -----
 
