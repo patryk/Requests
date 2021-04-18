@@ -83,6 +83,7 @@ Changelog
   
   Lots of improvements were made to render the tests more reliable and increase the coverage.
 
+  - All tests are now run against all supported PHP versions, including PHP 8.0.
   - PHPUnit config file moved to the project root.
   - Lots of fixing.
   - Builds made more stable.
