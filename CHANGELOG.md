@@ -151,24 +151,22 @@ Changelog
 
   (props [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@JustinyAhin][gh-JustinyAhin], [@tnorthcutt][gh-tnorthcutt], [#334][gh-334], [#367][gh-367], [#387][gh-387], [#443][gh-443], [#462][gh-462], [#465][gh-465], [#468][gh-468], [#471][gh-471] )
 
-[gh-334]: https://github.com/WordPress/Requests/issues/334
-[gh-428]: https://github.com/WordPress/Requests/issues/428
-[gh-280]: https://github.com/WordPress/Requests/issues/280
-[gh-298]: https://github.com/WordPress/Requests/issues/298
-[gh-310]: https://github.com/WordPress/Requests/issues/310
-[gh-248]: https://github.com/WordPress/Requests/issues/248
-[gh-249]: https://github.com/WordPress/Requests/issues/249
-[gh-318]: https://github.com/WordPress/Requests/issues/318
-[gh-335]: https://github.com/WordPress/Requests/issues/335
-[gh-440]: https://github.com/WordPress/Requests/issues/440
 [gh-194]: https://github.com/WordPress/Requests/issues/194
 [gh-238]: https://github.com/WordPress/Requests/issues/238
+[gh-248]: https://github.com/WordPress/Requests/issues/248
+[gh-249]: https://github.com/WordPress/Requests/issues/249
 [gh-263]: https://github.com/WordPress/Requests/issues/263
+[gh-280]: https://github.com/WordPress/Requests/issues/280
 [gh-296]: https://github.com/WordPress/Requests/issues/296
+[gh-298]: https://github.com/WordPress/Requests/issues/298
 [gh-302]: https://github.com/WordPress/Requests/issues/302
 [gh-303]: https://github.com/WordPress/Requests/issues/303
+[gh-310]: https://github.com/WordPress/Requests/issues/310
 [gh-311]: https://github.com/WordPress/Requests/issues/311
+[gh-318]: https://github.com/WordPress/Requests/issues/318
 [gh-328]: https://github.com/WordPress/Requests/issues/328
+[gh-334]: https://github.com/WordPress/Requests/issues/334
+[gh-335]: https://github.com/WordPress/Requests/issues/335
 [gh-339]: https://github.com/WordPress/Requests/issues/339
 [gh-345]: https://github.com/WordPress/Requests/issues/345
 [gh-346]: https://github.com/WordPress/Requests/issues/346
@@ -221,9 +219,11 @@ Changelog
 [gh-424]: https://github.com/WordPress/Requests/issues/424
 [gh-425]: https://github.com/WordPress/Requests/issues/425
 [gh-426]: https://github.com/WordPress/Requests/issues/426
+[gh-428]: https://github.com/WordPress/Requests/issues/428
 [gh-434]: https://github.com/WordPress/Requests/issues/434
 [gh-436]: https://github.com/WordPress/Requests/issues/436
 [gh-439]: https://github.com/WordPress/Requests/issues/439
+[gh-440]: https://github.com/WordPress/Requests/issues/440
 [gh-441]: https://github.com/WordPress/Requests/issues/441
 [gh-443]: https://github.com/WordPress/Requests/issues/443
 [gh-445]: https://github.com/WordPress/Requests/issues/445
@@ -241,6 +241,7 @@ Changelog
 [gh-467]: https://github.com/WordPress/Requests/issues/467
 [gh-468]: https://github.com/WordPress/Requests/issues/468
 [gh-469]: https://github.com/WordPress/Requests/issues/469
+[gh-471]: https://github.com/WordPress/Requests/issues/471
 
 1.7.0
 -----
@@ -555,13 +556,6 @@ default
 -----
 Initial release!
 
-[gh-JustinyAhin]: https://github.com/JustinyAhin
-[gh-KasperFranz]: https://github.com/KasperFranz
-[gh-SergeyBiryukov]: https://github.com/SergeyBiryukov
-[gh-SlikNL]: https://github.com/SlikNL
-[gh-TimothyBJacobs]: https://github.com/TimothyBJacobs
-[gh-TysonAndre]: https://github.com/TysonAndre
-[gh-Zegnat]: https://github.com/Zegnat
 [gh-aaronjorbin]: https://github.com/aaronjorbin
 [gh-adri]: https://github.com/adri
 [gh-beutnagel]: https://github.com/beutnagel
@@ -573,7 +567,9 @@ Initial release!
 [gh-gstrauss]: https://github.com/gstrauss
 [gh-ifwe]: https://github.com/ifwe
 [gh-imsaintx]: https://github.com/imsaintx
+[gh-JustinyAhin]: https://github.com/JustinyAhin
 [gh-jrfnl]: https://github.com/jrfnl
+[gh-KasperFranz]: https://github.com/KasperFranz
 [gh-kwuerl]: https://github.com/kwuerl
 [gh-laurentmartelli]: https://github.com/laurentmartelli
 [gh-mishan]: https://github.com/mishan
@@ -588,11 +584,16 @@ Initial release!
 [gh-rmccue]: https://github.com/rmccue
 [gh-royopa]: https://github.com/royopa
 [gh-schlessera]: https://github.com/schlessera
+[gh-SergeyBiryukov]: https://github.com/SergeyBiryukov
+[gh-SlikNL]: https://github.com/SlikNL
 [gh-soulseekah]: https://github.com/soulseekah
 [gh-staabm]: https://github.com/staabm
 [gh-stephenharris]: https://github.com/stephenharris
+[gh-TimothyBJacobs]: https://github.com/TimothyBJacobs
 [gh-tnorthcutt]: https://github.com/tnorthcutt
 [gh-todeveni]: https://github.com/todeveni
 [gh-tonebender]: https://github.com/tonebender
+[gh-TysonAndre]: https://github.com/TysonAndre
 [gh-whyisjake]: https://github.com/whyisjake
 [gh-xknown]: https://github.com/xknown
+[gh-Zegnat]: https://github.com/Zegnat
