@@ -45,7 +45,7 @@ Changelog
 
   To prevent this, `Requests` now adds an empty `"Expect"` header to requests that are smaller than 1 MB and use HTTP/1.1.
 
-  (props [@carlalexander][gh-carlalexander], [@TimothyBJacobs][gh-TimothyBJacobs], [#453][gh-453], [#454][gh-454], [#469][gh-469])
+  (props [@carlalexander][gh-carlalexander], [@schlessera][gh-schlessera], [@TimothyBJacobs][gh-TimothyBJacobs], [#453][gh-453], [#454][gh-454], [#469][gh-469])
 
 
 - **Update bundled certificates as of 2021-02-12**
