@@ -95,7 +95,7 @@ Changelog
 
 - **Improve code quality**
   
-  A whole swoop of changes has been made to modernize the code and make it more consistent across PHP versions and platforms.
+  A whole swoop of changes has been made to improve the PHP and platform cross-version compatibility of the code and make the code more consistent and more performant.
 
   - Fix PHP 7/8 compatibility issues.
   - Add linting.
