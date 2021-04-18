@@ -103,16 +103,11 @@ Changelog
   (props [@datagutten][gh-datagutten], [@jrfnl][gh-jrfnl], [@schlessera][gh-schlessera], [#345][gh-345], [#351][gh-351], [#355][gh-355], [#366][gh-366], [#412][gh-412], [#414][gh-414], [#445][gh-445], [#458][gh-458], [#464][gh-464])
 
 
-- **Improve code quality**
+- **Improve code quality and style**
   
-  A whole swoop of changes has been made to improve the PHP and platform cross-version compatibility of the code and make the code more consistent and more performant.
+  A whole swoop of changes has been made to harden the code and make it more consistent.
 
-  (props [@jrfnl][gh-jrfnl], [@KasperFranz][gh-KasperFranz], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TysonAndre][gh-TysonAndre], [#263][gh-263], [#296][gh-296], [#328][gh-328], [#358][gh-358], [#359][gh-359], [#386][gh-386], [#396][gh-396], [#400][gh-400], [#401][gh-401], [#404][gh-404], [#413][gh-413])
-  
-
-- **Improve and enforce code style**
-
-  The code style has been made consistent across all the code and tests and is now enforced via a custom PHPCS rule set.
+  The code style has been made consistent across both code and tests and is now enforced via a custom PHPCS rule set.
 
   The WordPress Coding Standards were chosen as the basis for the code style checks as most contributors to this library originate from the WordPress community and will be familiar with this code style.
 
@@ -123,10 +118,7 @@ Changelog
 
   A more detailed overview of the decisions that went into the final code style rules can be found at [#434][gh-434].
 
-  - Make code style consistent across all the code and tests.
-  - Create a code style rule & associated check to enforce its consistency.
-
-  (props [@jrfnl][gh-jrfnl], [#360][gh-360], [#361][gh-361], [#362][gh-362], [#363][gh-363], [#364][gh-364], [#399][gh-399], [#402][gh-402], [#403][gh-403], [#405][gh-405], [#406][gh-406], [#408][gh-408], [#409][gh-409], [#410][gh-410], [#411][gh-411], [#415][gh-415], [#416][gh-416], [#417][gh-417], [#423][gh-423], [#424][gh-424], [#434][gh-434])
+  (props [@jrfnl][gh-jrfnl], [@KasperFranz][gh-KasperFranz], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TysonAndre][gh-TysonAndre], [#263][gh-263], [#296][gh-296], [#328][gh-328], [#358][gh-358], [#359][gh-359], [#360][gh-360], [#361][gh-361], [#362][gh-362], [#363][gh-363], [#364][gh-364], [#386][gh-386], [#396][gh-396], [#399][gh-399], [#400][gh-400], [#401][gh-401], [#402][gh-402], [#403][gh-403], [#404][gh-404], [#405][gh-405], [#406][gh-406], [#408][gh-408], [#409][gh-409], [#410][gh-410], [#411][gh-411], [#413][gh-413], [#415][gh-415], [#416][gh-416], [#417][gh-417], [#423][gh-423], [#424][gh-424], [#434][gh-434])
 
 
 - **Replace Travis CI with GitHub Actions (partial)**
