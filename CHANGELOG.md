@@ -83,15 +83,9 @@ Changelog
   
   Lots of improvements were made to render the tests more reliable and increase the coverage.
 
-  - All tests are now run against all supported PHP versions, including PHP 8.0.
-  - PHPUnit config file moved to the project root.
-  - Lots of fixing.
-  - Builds made more stable.
-  - Tests added for exception messages.
-  - Code coverage moved from coverall to codecov.
-  - Add shebangs to proxy shell scripts
+  And to top it all off, all tests are now run against all supported PHP versions, including PHP 8.0.
 
-  (props [@datagutten][gh-datagutten], [@jrfnl][gh-jrfnl], [@schlessera][gh-schlessera], [#345][gh-345], [#351][gh-351], [#355][gh-355], [#412][gh-412], [#414][gh-414], [#445][gh-445], [#458][gh-458], [#464][gh-464])
+  (props [@datagutten][gh-datagutten], [@jrfnl][gh-jrfnl], [@schlessera][gh-schlessera], [#345][gh-345], [#351][gh-351], [#355][gh-355], [#366][gh-366], [#412][gh-412], [#414][gh-414], [#445][gh-445], [#458][gh-458], [#464][gh-464])
 
 
 - **Improve code quality**
@@ -140,7 +134,7 @@ Changelog
 
   This move will be completed after the planned minimum version bump to PHP 5.6+ with the next release, at which point we will get rid of all the remaining Travis CI integrations.
 
-  (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@ntwb][gh-ntwb], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TimothyBJacobs][gh-TimothyBJacobs], [@TysonAndre][gh-TysonAndre], [#280][gh-280], [#298][gh-298], [#302][gh-302], [#303][gh-303], [#352][gh-352], [#353][gh-353], [#354][gh-354], [#356][gh-356], [#366][gh-366], [#388][gh-388], [#397][gh-397], [#428][gh-428], [#436][gh-436], [#439][gh-439], [#461][gh-461], [#467][gh-467])
+  (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@ntwb][gh-ntwb], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TimothyBJacobs][gh-TimothyBJacobs], [@TysonAndre][gh-TysonAndre], [#280][gh-280], [#298][gh-298], [#302][gh-302], [#303][gh-303], [#352][gh-352], [#353][gh-353], [#354][gh-354], [#356][gh-356], [#388][gh-388], [#397][gh-397], [#428][gh-428], [#436][gh-436], [#439][gh-439], [#461][gh-461], [#467][gh-467])
 
 
 - **Update and improve documentation**
