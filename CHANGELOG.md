@@ -50,7 +50,7 @@ Changelog
 
 - **Update bundled certificates as of 2021-02-12**
 
-  The bundled certificates were updated to match what WordPress Core is currently shipping.
+  The bundled certificates were updated. A small subset of expired certificates are still included for legacy reasons (and support).
 
   (props [@ozh][gh-ozh], [@patmead][gh-patmead], [@schlessera][gh-schlessera], [@todeveni][gh-todeveni], [#451][gh-451], [#398][gh-398], [#385][gh-385])
 
