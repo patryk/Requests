@@ -52,7 +52,7 @@ Changelog
 
   The bundled certificates were updated. A small subset of expired certificates are still included for legacy reasons (and support).
 
-  (props [@ozh][gh-ozh], [@patmead][gh-patmead], [@schlessera][gh-schlessera], [@todeveni][gh-todeveni], [#451][gh-451], [#398][gh-398], [#385][gh-385])
+  (props [@ozh][gh-ozh], [@patmead][gh-patmead], [@schlessera][gh-schlessera], [@todeveni][gh-todeveni], [#385][gh-385], [#398][gh-398], [#451][gh-451])
 
 
 - **Add required `Content-*` headers for empty `POST` requests**
@@ -79,7 +79,7 @@ Changelog
   
   (props [@soulseekah][gh-soulseekah], [#310][gh-310], [#311][gh-311])
 
-- Improve testing**
+- **Improve testing**
   
   Lots of improvements were made to render the tests more reliable and increase the coverage.
 
@@ -149,7 +149,7 @@ Changelog
   - Fix code blocks in `README.md` file.
   - Add pagination to documentation pages.
 
-  (props [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@JustinyAhin][gh-JustinyAhin], [@tnorthcutt][gh-tnorthcutt], [#334][gh-334], [#367][gh-367], [#387][gh-387], [#468][gh-468], [#465][gh-465], [#462][gh-462], [#443][gh-443])
+  (props [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@JustinyAhin][gh-JustinyAhin], [@tnorthcutt][gh-tnorthcutt], [#334][gh-334], [#367][gh-367], [#387][gh-387], [#443][gh-443], [#462][gh-462], [#465][gh-465], [#468][gh-468], [#471][gh-471] )
 
 [gh-334]: https://github.com/WordPress/Requests/issues/334
 [gh-428]: https://github.com/WordPress/Requests/issues/428
