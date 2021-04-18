@@ -26,7 +26,7 @@ Changelog
 
   Related WordPress CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-28032
 
-  (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@peterwilsoncc][gh-peterwilsoncc], [@SergeyBiryukov][gh-SergeyBiryukov], [@whyisjake][gh-whyisjake], [@xknown][gh-xknown], [#421][gh-421], [#422][gh-422], [#457][gh-457])
+  (props [@dd32][gh-dd32], [@desrosj][gh-desrosj], [@jrfnl][gh-jrfnl], [@peterwilsoncc][gh-peterwilsoncc], [@SergeyBiryukov][gh-SergeyBiryukov], [@whyisjake][gh-whyisjake], [@xknown][gh-xknown], [#421][gh-421], [#422][gh-422])
 
 
 - **Repository moved to `WordPress\Requests`**
@@ -79,6 +79,21 @@ Changelog
   
   (props [@soulseekah][gh-soulseekah], [#310][gh-310], [#311][gh-311])
 
+
+- **Fix PHP cross-version compatibility**
+
+  Important fixes have been made to improve cross-version compatibility of the code across all supported PHP versions.
+
+  - Use documented order for `implode()` arguments
+  - Harden type handling when no domain was passed
+  - Explicitly cast `$url` property to `string` in `Requests::parse_response()`
+  - Initialize `$body` property to an empty string in `Requests::parse_response()`
+  - Ensure the stream handle is valid before trying to close it
+  - Ensure the `$callback` in the `FilteredIterator` is callable before calling it
+
+  (props [@aaronjorbin][gh-aaronjorbin], [@jrfnl][gh-jrfnl], [#346][gh-346], [#370][gh-370], [#425][gh-425], [#426][gh-426], [#456][gh-456], [#457][gh-457])
+
+
 - **Improve testing**
   
   Lots of improvements were made to render the tests more reliable and increase the coverage.
@@ -92,19 +107,7 @@ Changelog
   
   A whole swoop of changes has been made to improve the PHP and platform cross-version compatibility of the code and make the code more consistent and more performant.
 
-  - Fix PHP 7/8 compatibility issues.
-  - Add linting.
-  - Add a `.gitattributes` file
-  - Remove useless variable assignments.
-  - Use strict comparisons.
-  - Improve typing.
-  - Remove unused code.
-  - Don't use `count()` in a looping condition.
-  - Remove unnecessary references.
-  - Remove dead code.
-  - Improve docblocks.
-
-  (props [@aaronjorbin][gh-aaronjorbin], [@jrfnl][gh-jrfnl], [@KasperFranz][gh-KasperFranz], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TysonAndre][gh-TysonAndre], [#263][gh-263], [#296][gh-296], [#328][gh-328], [#346][gh-346], [#358][gh-358], [#359][gh-359], [#370][gh-370], [#386][gh-386], [#396][gh-396], [#400][gh-400], [#401][gh-401], [#404][gh-404], [#413][gh-413], [#425][gh-425], [#426][gh-426], [#456][gh-456])
+  (props [@jrfnl][gh-jrfnl], [@KasperFranz][gh-KasperFranz], [@ozh][gh-ozh], [@schlessera][gh-schlessera], [@TysonAndre][gh-TysonAndre], [#263][gh-263], [#296][gh-296], [#328][gh-328], [#358][gh-358], [#359][gh-359], [#386][gh-386], [#396][gh-396], [#400][gh-400], [#401][gh-401], [#404][gh-404], [#413][gh-413])
   
 
 - **Improve and enforce code style**
