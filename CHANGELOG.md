@@ -80,6 +80,13 @@ Changelog
   (props [@soulseekah][gh-soulseekah], [#310][gh-310], [#311][gh-311])
 
 
+- **Only include port number in the `Host` header if it differs from the default**
+
+  The code was not violating the RFC per se, but also not following standard practice of leaving the port off when it is the default port for the scheme, which could lead to connectivity issues.
+
+  (props [@amandato][gh-amandato], [@dd32][gh-dd32], [#238][gh-238])
+
+
 - **Fix PHP cross-version compatibility**
 
   Important fixes have been made to improve cross-version compatibility of the code across all supported PHP versions.
