@@ -8,7 +8,7 @@ Changelog
 
 #### Last release before a PHP minimum version bump
 
-  Release 1.8.0 will be the last release with compatibility for PHP 5.2 - 5.5. With the next release (v2.0.0), the minimum PHP version will be bumped to 5.6+, matching the current PHP minimum version requirement of WordPress Core.
+  Release 1.8.0 will be the last release with compatibility for PHP 5.2 - 5.5. With the next release (v2.0.0), the minimum PHP version will be bumped to 5.6+.
 
 #### Last release supporting PEAR distribution
 
