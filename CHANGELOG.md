@@ -20,7 +20,7 @@ Changelog
 
   A `Deserialization of Untrusted Data` weakness was found in the `FilteredIterator` class.
   
-  This security vulnerability was first detected in the files bundled with WordPress. The security fix from https://core.trac.wordpress.org/changeset/49373 has now been ported back into the library.
+  This security vulnerability was first reported to the WordPress project. The security fix applied to WordPress has been ported back into the library.
   
   GitHub security advisory: [link to GHSA]
 
