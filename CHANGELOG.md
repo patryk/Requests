@@ -555,6 +555,7 @@ Initial release!
 
 [gh-aaronjorbin]: https://github.com/aaronjorbin
 [gh-adri]: https://github.com/adri
+[gh-amandato]: https://github.com/amandato
 [gh-beutnagel]: https://github.com/beutnagel
 [gh-carlalexander]: https://github.com/carlalexander
 [gh-catharsisjelly]: https://github.com/catharsisjelly
