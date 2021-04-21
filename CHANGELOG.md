@@ -6,7 +6,7 @@ Changelog
 
 ### IMPORTANT NOTES
 
-#### Last release before a PHP minimum version bump
+#### Last release supporting PHP 5.2 - 5.5
 
   Release 1.8.0 will be the last release with compatibility for PHP 5.2 - 5.5. With the next release (v2.0.0), the minimum PHP version will be bumped to 5.6.
 
