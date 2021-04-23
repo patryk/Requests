@@ -1,7 +1,7 @@
 {
-	"name": "rmccue/requests",
+	"name": "patryk/requests",
 	"description": "A HTTP library written in PHP, for human beings.",
-	"homepage": "http://github.com/WordPress/Requests",
+	"homepage": "http://github.com/patryk/Requests",
 	"license": "ISC",
 	"keywords": ["http", "idna", "iri", "ipv6", "curl", "sockets", "fsockopen"],
 	"authors": [
